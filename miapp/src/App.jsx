@@ -1,12 +1,12 @@
-import { Router, Routes,Route } from "react-router-dom";
-import Button from "./components/button";
+
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Layaut from "./components/layaut";
 import NavBar from "./components/navbar";
-import Servicios from "./Screens/servicios";
-import Sectores from "./Screens/sectore";
-import Contacto from "./Screens/contacto";
-import Nosotros from "./Screens/nosotros";
-import Home from "./Screens/home";
+import Home from "./Pages/home";
+import Servicios from "./Pages/servicios";
+import Sectores from "./Pages/sectore";
+import Nosotros from "./Pages/nosotros";
+import Contacto from "./Pages/contacto";
 
 
 function App() {
@@ -14,21 +14,21 @@ function App() {
     
    <>
       <NavBar></NavBar>
-      <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="Servicios" element={<Servicios/>}></Route>
-        <Route path="Sectores" element={<Sectores/>}></Route>
-        <Route path="Contacto" element={<Contacto/>}></Route>
-        <Route path="Nosotros" element={<Nosotros/>}></Route>
-
-      </Routes>
-      <Layaut/>
-   </>
       
-    
+      <Layaut>
+       
+        <Routes>
+          <Route path='/' element={<Home></Home>} ></Route>
+          <Route path='/servicios' element={<Servicios></Servicios>} ></Route>
+          <Route path='/sectore' element={<Sectores></Sectores>} ></Route>
+          <Route path='/nosotros' element={<Nosotros></Nosotros>} ></Route>
+          <Route path='/contacto' element={<Contacto></Contacto>} ></Route>
 
+          <Route path='*' element={<Navigate to="/" ></Navigate>} ></Route>
+        </Routes>
      
-     
+      </Layaut>
+   </>   
     
   );
 }
