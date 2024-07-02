@@ -7,6 +7,7 @@ import Servicios from "./Pages/servicios";
 import Sectores from "./Pages/sectore";
 import Nosotros from "./Pages/nosotros";
 import Contacto from "./Pages/contacto";
+import Footer from "./components/footer";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         </Routes>
      
       </Layaut>
+      <Footer></Footer>
    </>   
     
   );

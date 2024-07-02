@@ -2,8 +2,10 @@
 
 const Contacto = () => {
   return (
-    
+   <> 
     <div>C</div>
+    
+  </>
   )
 }
 
