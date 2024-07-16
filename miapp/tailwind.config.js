@@ -1,3 +1,5 @@
+import Footer from './src/components/footer'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -10,8 +12,9 @@ export default {
     extend: {
       textShadow:{
         'default': '0px 0px 12px rgb(64, 243, 17)' ,
-      
+        
       }
+      
     },
   },
   plugins: [
