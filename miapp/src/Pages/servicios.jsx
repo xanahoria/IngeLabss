@@ -15,13 +15,13 @@ const Servicios = () => {
         modalImg: '/src/assets/ServiciosProbetasPestaña1.png',
         description: 'Probetas para ensayo de tracción', 
         link: '/ruta-deseada1', 
-        info: 'Información detallada sobre el ensayo de tracción.',
+        info: 'HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaecHerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca',
         preparationSteps: [
           'Paso 1: Preparar el material.',
           'Paso 2: Cortar las probetas.',
           'Paso 3: Medir y marcar.',
         ],
-        preparationImg: '/src/assets/ServiciosProbetasPestaña1.png',
+        preparationImg: '/src/assets/ServiciosProbetasPestaña2.png',
       },
       { 
         img: '/src/assets/ServiciosProbetas.png', 
@@ -76,7 +76,6 @@ const Servicios = () => {
         preparationImg: '/src/assets/Preparacion5.png',
       },
     ],
-    //------------------------------------------------------------------------------------
     'Calibración': [
       { 
         img: '/src/assets/ruta-de-la-imagen-calibracion1.png', 
@@ -118,7 +117,6 @@ const Servicios = () => {
         preparationImg: '/src/assets/Calibracion3.png',
       },
     ],
-    //------------------------------------------------------------------------------------
     'Mantenimiento e Inspección': [
       { 
         img: '/src/assets/ruta-de-la-imagen-mantenimiento1.png', 
@@ -147,7 +145,6 @@ const Servicios = () => {
         preparationImg: '/src/assets/Mantenimiento2.png',
       },
     ],
-    //------------------------------------------------------------------------------------
     'Laboratorio de Ensayos': [
       { 
         img: '/src/assets/ruta-de-la-imagen-ensayos1.png', 
@@ -177,17 +174,18 @@ const Servicios = () => {
       },
     ],
   };
+  
 
   const handleCardClick = (content) => {
     setModalContent(content);
-    setAnuncioInfo(content.info); // Establece la información específica del anuncio
+    setAnuncioInfo(content.info);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setModalContent(null);
-    setAnuncioInfo(''); // Limpia la información del anuncio al cerrar el modal
+    setAnuncioInfo('');
   };
 
   return (
@@ -272,30 +270,34 @@ const Servicios = () => {
               &times;
             </button>
             <div className="text-2xl text-purple-600 font-bold mb-4">{modalContent.description}</div>
-            <div className="flex flex-col lg:flex-row">
-              <div className="lg:w-1/2 w-full mb-4 lg:mb-0">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div className="lg:col-span-1">
                 <img 
                   src={modalContent.modalImg} 
                   alt={modalContent.description} 
                   className="w-full h-auto object-cover rounded-lg"
                 />
               </div>
-              <div className="lg:w-1/2 w-full text-white lg:pl-4">
-                <div className="text-lg font-bold mb-2">Usos</div>
+              <div className="lg:col-span-1 text-white">
+                <div className="text-lg font-bold mb-2">Uso</div>
                 <p>{anuncioInfo}</p>
-                <div className="text-lg font-bold mt-4 mb-2">Preparación:</div>
-                <div className="flex items-start mb-4">
-                  <img 
-                    src={modalContent.preparationImg} 
-                    alt="Preparación" 
-                    className="w-1/3 h-auto object-cover rounded-lg mr-4"
-                  />
-                  <ul className="list-disc list-inside text-white">
-                    {modalContent.preparationSteps.map((step, index) => (
-                      <li key={index}>{step}</li>
-                    ))}
-                  </ul>
-                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+              <div className="lg:col-span-1 text-white">
+                <div className="text-lg font-bold mb-2">Preparación</div>
+                <ul className="list-disc list-inside text-white">
+                  {modalContent.preparationSteps.map((step, index) => (
+                    <li key={index}>{step}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="lg:col-span-1 flex items-center justify-center">
+                <img 
+                  src={modalContent.preparationImg} 
+                  alt="Preparación" 
+                  className="w-2/3 h-auto object-cover rounded-lg"
+                />
               </div>
             </div>
           </div>
