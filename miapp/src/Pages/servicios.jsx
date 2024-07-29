@@ -14,7 +14,6 @@ const Servicios = () => {
         img: '/src/assets/ServiciosProbetas.png', 
         modalImg: '/src/assets/ServiciosProbetasPestaña1.png',
         description: 'Probetas para ensayo de tracción', 
-        link: '/ruta-deseada1', 
         info: 'HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaecHerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca',
         preparationSteps: [
           'Paso 1: Preparar el material.',
@@ -27,7 +26,6 @@ const Servicios = () => {
         img: '/src/assets/ServiciosProbetas.png', 
         modalImg: '/src/assets/ProbetasCompresion.png',
         description: 'Probetas para ensayo de compresión', 
-        link: '/ruta-deseada2', 
         info: 'Información detallada sobre el ensayo de compresión.',
         preparationSteps: [
           'Paso 1: Preparar el material.',
@@ -40,7 +38,6 @@ const Servicios = () => {
         img: '/src/assets/ServiciosProbetas.png', 
         modalImg: '/src/assets/ProbetasRayosX.png',
         description: 'Probetas para ensayo de análisis de rayos X', 
-        link: '/ruta-deseada3', 
         info: 'Información detallada sobre el análisis de rayos X.',
         preparationSteps: [
           'Paso 1: Preparar el material.',
@@ -53,7 +50,6 @@ const Servicios = () => {
         img: '/src/assets/ServiciosProbetas.png', 
         modalImg: '/src/assets/ProbetasCorte.png',
         description: 'Probetas para ensayo de corte', 
-        link: '/ruta-deseada4', 
         info: 'Información detallada sobre el ensayo de corte.',
         preparationSteps: [
           'Paso 1: Preparar el material.',
@@ -66,7 +62,6 @@ const Servicios = () => {
         img: '/src/assets/ServiciosProbetas.png', 
         modalImg: '/src/assets/ProbetasFlexion.png',
         description: 'Probetas para ensayo de flexión', 
-        link: '/ruta-deseada5', 
         info: 'Información detallada sobre el ensayo de flexión.',
         preparationSteps: [
           'Paso 1: Preparar el material.',
@@ -81,7 +76,6 @@ const Servicios = () => {
         img: '/src/assets/ruta-de-la-imagen-calibracion1.png', 
         modalImg: '/src/assets/ruta-de-la-imagen-calibracion1.png', 
         description: 'Descripción calibración 1', 
-        link: '/ruta-calibracion1', 
         info: 'Información detallada sobre la calibración 1.',
         preparationSteps: [
           'Paso 1: Ajustar el calibrador.',
@@ -94,7 +88,6 @@ const Servicios = () => {
         img: '/src/assets/ruta-de-la-imagen-calibracion2.png', 
         modalImg: '/src/assets/ruta-de-la-imagen-calibracion2.png', 
         description: 'Descripción calibración 2', 
-        link: '/ruta-calibracion2', 
         info: 'Información detallada sobre la calibración 2.',
         preparationSteps: [
           'Paso 1: Preparar el equipo.',
@@ -107,7 +100,6 @@ const Servicios = () => {
         img: '/src/assets/ruta-de-la-imagen-calibracion3.png', 
         modalImg: '/src/assets/ruta-de-la-imagen-calibracion3.png', 
         description: 'Descripción calibración 3', 
-        link: '/ruta-calibracion3', 
         info: 'Información detallada sobre la calibración 3.',
         preparationSteps: [
           'Paso 1: Verificar equipo.',
@@ -122,7 +114,6 @@ const Servicios = () => {
         img: '/src/assets/ruta-de-la-imagen-mantenimiento1.png', 
         modalImg: '/src/assets/ruta-de-la-imagen-mantenimiento1.png', 
         description: 'Descripción mantenimiento 1', 
-        link: '/ruta-mantenimiento1', 
         info: 'Información detallada sobre el mantenimiento 1.',
         preparationSteps: [
           'Paso 1: Inspeccionar equipos.',
@@ -135,7 +126,6 @@ const Servicios = () => {
         img: '/src/assets/ruta-de-la-imagen-mantenimiento2.png', 
         modalImg: '/src/assets/ruta-de-la-imagen-mantenimiento2.png', 
         description: 'Descripción mantenimiento 2', 
-        link: '/ruta-mantenimiento2', 
         info: 'Información detallada sobre el mantenimiento 2.',
         preparationSteps: [
           'Paso 1: Revisar estado.',
@@ -150,7 +140,6 @@ const Servicios = () => {
         img: '/src/assets/ruta-de-la-imagen-ensayos1.png', 
         modalImg: '/src/assets/ruta-de-la-imagen-ensayos1.png', 
         description: 'Descripción ensayos 1', 
-        link: '/ruta-ensayos1', 
         info: 'Información detallada sobre el ensayo 1.',
         preparationSteps: [
           'Paso 1: Preparar muestras.',
@@ -163,7 +152,6 @@ const Servicios = () => {
         img: '/src/assets/ruta-de-la-imagen-ensayos2.png', 
         modalImg: '/src/assets/ruta-de-la-imagen-ensayos2.png', 
         description: 'Descripción ensayos 2', 
-        link: '/ruta-ensayos2', 
         info: 'Información detallada sobre el ensayo 2.',
         preparationSteps: [
           'Paso 1: Revisar equipo.',
