@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const Servicios = () => {
   const [selectedService, setSelectedService] = useState('Preparación de Probetas');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
   const [anuncioInfo, setAnuncioInfo] = useState('');
-  const navigate = useNavigate();
 
   const servicesContent = {
     'Preparación de Probetas': [
