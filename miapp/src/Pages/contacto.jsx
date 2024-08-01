@@ -1,12 +1,6 @@
-
-
 const Contacto = () => {
   return (
-   <> 
-    <div>C</div>
-    
-  </>
+    <div>hoofoofofofofoofo</div>
   )
 }
-
 export default Contacto;
