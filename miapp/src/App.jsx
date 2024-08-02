@@ -16,8 +16,8 @@ function App() {
    <>
       <NavBar></NavBar>
       
+
       <Layaut>
-       
         <Routes>
           <Route path='/' element={<Home></Home>} ></Route>
           <Route path='/servicios' element={<Servicios></Servicios>} ></Route>
@@ -27,8 +27,10 @@ function App() {
 
           <Route path='*' element={<Navigate to="/" ></Navigate>} ></Route>
         </Routes>
-     
-      </Layaut>
+
+
+        </Layaut> 
+        
       <Footer></Footer>
    </>   
     

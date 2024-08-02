@@ -12,7 +12,7 @@ const Servicios = () => {
         img: '/src/assets/ServiciosProbetas.png', 
         modalImg: '/src/assets/ServiciosProbetasPestaña1.png',
         description: 'Probetas para ensayo de tracción', 
-        info: 'HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaecHerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca',
+        info: 'HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod sint occaeca HerramientasLorem ipsum dolor sit amet, consectetur adipiscing elit.',
         preparationSteps: [
           'Paso 1: Preparar el material.',
           'Paso 2: Cortar las probetas.',
@@ -224,7 +224,7 @@ const Servicios = () => {
       </div>
 
       <div className="max-w-screen-lg mx-auto mt-8">
-        <div className="p-4 rounded-lg" style={{ backgroundColor: '#1E211C' }}>
+        <div className="p-4 rounded-lg bg-[#1E211C]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {servicesContent[selectedService].map((service, index) => (
               <div 

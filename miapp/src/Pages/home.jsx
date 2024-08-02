@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoDocumentTextSharp } from "react-icons/io5";
@@ -14,7 +14,104 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 const Home = () => {
- 
+  const [selectedCategory, setSelectedCategory] = useState('Ensayos');
+
+  const categoryContent = {
+    'Ensayos': [
+      {
+        img: '/src/assets/ENSAYO DE TRACCION.jpg',
+        title: 'Ensayo de Tracción',
+        description: 'Descripción detallada sobre el ensayo de tracción.',
+      },
+      {
+        img: '/src/assets/ENSAYO DE TRACCION.jpg',
+        title: 'Ensayo de Compresión',
+        description: 'Descripción detallada sobre el ensayo de compresión.',
+      },
+      {
+        img: '/src/assets/ENSAYO DE TRACCION.jpg',
+        title: 'Ensayo de Dureza',
+        description: 'Descripción detallada sobre el ensayo de dureza.',
+      },
+      {
+        img: '/src/assets/ENSAYO DE TRACCION.jpg',
+        title: 'Ensayo de Fatiga',
+        description: 'Descripción detallada sobre el ensayo de fatiga.',
+      },
+    ],
+    'Probetas': [
+      {
+        img: '/src/assets/PROBETAS.jpg',
+        title: 'Probetas de Acero',
+        description: 'Descripción sobre probetas de acero.',
+      },
+      {
+        img: '/src/assets/PROBETAS.jpg',
+        title: 'Probetas de Aluminio',
+        description: 'Descripción sobre probetas de aluminio.',
+      },
+      {
+        img: '/src/assets/ENSAYO DE TRACCION.jpg',
+        title: 'Probetas de Plástico',
+        description: 'Descripción sobre probetas de plástico.',
+      },
+      {
+        img: '/src/assets/PROBETAS.jpg',
+        title: 'Probetas Compuestas',
+        description: 'Descripción sobre probetas compuestas.',
+      },
+    ],
+    'Mantenimiento': [
+      {
+        img: '/src/assets/MANTENIMIENTO.jpg',
+        title: 'Mantenimiento Preventivo',
+        description: 'Descripción sobre mantenimiento preventivo.',
+      },
+      {
+        img: '/src/assets/ENSAYO DE TRACCION.jpg',
+        title: 'Mantenimiento Correctivo',
+        description: 'Descripción sobre mantenimiento correctivo.',
+      },
+      {
+        img: '/src/assets/MANTENIMIENTO.jpg',
+        title: 'Mantenimiento Predictivo',
+        description: 'Descripción sobre mantenimiento predictivo.',
+      },
+      {
+        img: '/src/assets/MANTENIMIENTO.jpg',
+        title: 'Mantenimiento Proactivo',
+        description: 'Descripción sobre mantenimiento proactivo.',
+      },
+
+    ],
+    'Asesoria': [
+      {
+        img: '/src/assets/ASESORIAS.jpg',
+        title: 'Asesoría Técnica',
+        description: 'Descripción sobre asesoría técnica.',
+      },
+      {
+        img: '/src/assets/ASESORIAS.jpg',
+        title: 'Asesoría en Diseño',
+        description: 'Descripción sobre asesoría en diseño.',
+      },
+      {
+        img: '/src/assets/ASESORIAS.jpg',
+        title: 'Asesoría en Normativas',
+        description: 'Descripción sobre asesoría en normativas.',
+      },
+      {
+        img: '/src/assets/ENSAYO DE TRACCION.jpg',
+        title: 'Asesoría en Implementación',
+        description: 'Descripción sobre asesoría en implementación.',
+      },
+    ],
+  };
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <>
       <section className=" container none flex items-center w-[100%]">
@@ -80,182 +177,110 @@ const Home = () => {
       <section className="container mx-auto">
         <div>
           <div className="flex pt-12 justify-center items-center">
-            <span classname="">
-              <div className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]">
-                <IoDocumentTextSharp className=" mr-2 w-10 h-10 text-black " />
+            <span>
+              <div
+                className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]"
+                onClick={() => handleCategoryClick('Ensayos')}
+              >
+                <IoDocumentTextSharp className="mr-2 w-10 h-10 text-black" />
               </div>
               <p className="text-white font-light text-sm pt-2 text-center cursor-pointer">
                 Ensayos
               </p>
             </span>
-            <span classname="">
-              <div className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]">
-                <GiTestTubes className=" mr-2 w-10 h-10 text-black " />
+            <span>
+              <div
+                className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]"
+                onClick={() => handleCategoryClick('Probetas')}
+              >
+                <GiTestTubes className="mr-2 w-10 h-10 text-black" />
               </div>
               <p className="text-white font-light text-sm pt-2 text-center cursor-pointer">
                 Probetas
               </p>
             </span>
-            <span classname="">
-              <div className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]">
-                <FaTools className=" mr-2 w-10 h-10 text-black " />
+            <span>
+              <div
+                className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]"
+                onClick={() => handleCategoryClick('Mantenimiento')}
+              >
+                <FaTools className="mr-2 w-10 h-10 text-black" />
               </div>
               <p className="text-white font-light text-sm pt-2 text-center cursor-pointer">
                 Mantenimiento
               </p>
             </span>
-            <span classname="">
-              <div className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]">
-                <HiUserGroup className=" mr-2 w-10 h-10 text-black " />
+            <span>
+              <div
+                className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]"
+                onClick={() => handleCategoryClick('Asesoria')}
+              >
+                <HiUserGroup className="mr-2 w-10 h-10 text-black" />
               </div>
               <p className="text-white font-light text-sm pt-2 text-center cursor-pointer">
-                Asesoria
+                Asesoría
               </p>
             </span>
           </div>
         </div>
-        <div className="">
-          <div className="flex pt-12 justify-center items-center">
-            <div className="bg-white max-w-64 rounded-[50px] overflow-hidden p-8 mr-10">
-              <div className="overflow-hidden rounded-[20px] ">
-                <img
-                  className="h-44"
-                  src="/src/assets/ENSAYO DE TRACCION.jpg"
-                ></img>
-              </div>
-              <h1 className="text-center font-medium p-3 ">
-                ENSAYO DE TRACCION
-              </h1>
-              <p className="text-center text-sm ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                lacinia odio vitae vestibulum vestibulum.
-              </p>
-              <br></br>
-              <div className="pl-11">
-                <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-24  bg-[#39f809] hover:bg-[#0921f8] rounded-[50px] p-1 text-center">
-                  <NavLink
-                    to="/"
-                    className="font-medium hover:text-[#4cfb0e]  "
-                  >
-                    Más
-                  </NavLink>
+        <div>
+          <section className="container mx-auto pt-12">
+            <h1 className="text-center text-2xl text-shadow font-semibold text-[#00ff66]">Nuestros Servicios</h1>
+            <div className="flex flex-wrap justify-center gap-6 pt-12">
+              {categoryContent[selectedCategory].map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white max-w-64 rounded-[50px] overflow-hidden p-8"
+                >
+                  <div className="overflow-hidden rounded-[20px]">
+                    <img className="h-44 w-full object-cover" src={item.img} alt={item.title} />
+                  </div>
+                  <h1 className="text-center font-medium p-3 text-lg">{item.title}</h1>
+                  <p className="text-center text-sm text-gray-600">{item.description}</p>
+                  <div className="flex justify-center pt-4">
+                    <NavLink to="/" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-24 bg-[#39f809] hover:bg-[#0921f8] rounded-full p-2 text-center text-white font-medium">
+                      Más
+                    </NavLink>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-
-            <div className="bg-white max-w-64 rounded-[50px] overflow-hidden p-8 mr-10">
-              <div className="overflow-hidden rounded-[20px] ">
-                <img
-                  className="h-44"
-                  src="/src/assets/ENSAYO DE TRACCION.jpg"
-                ></img>
-              </div>
-              <h1 className="text-center font-medium p-3 ">
-                ENSAYO DE TRACCION
-              </h1>
-              <p className="text-center text-sm ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                lacinia odio vitae vestibulum vestibulum.
-              </p>
-              <br></br>
-              <div className="pl-11">
-                <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-24  bg-[#39f809] hover:bg-[#0921f8] rounded-[50px] p-1 text-center">
-                  <NavLink
-                    to="/"
-                    className="font-medium hover:text-[#4cfb0e]  "
-                  >
-                    Más
-                  </NavLink>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white max-w-64 rounded-[50px] overflow-hidden p-8 mr-10">
-              <div className="overflow-hidden rounded-[20px] ">
-                <img
-                  className="h-44"
-                  src="/src/assets/ENSAYO DE TRACCION.jpg"
-                ></img>
-              </div>
-              <h1 className="text-center font-medium p-3 ">
-                ENSAYO DE TRACCION
-              </h1>
-              <p className="text-center text-sm ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                lacinia odio vitae vestibulum vestibulum.
-              </p>
-              <br></br>
-              <div className="pl-11">
-                <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-24  bg-[#39f809] hover:bg-[#0921f8] rounded-[50px] p-1 text-center">
-                  <NavLink
-                    to="/"
-                    className="font-medium hover:text-[#4cfb0e]  ">
-                    Más
-                  </NavLink>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white max-w-64 rounded-[50px] overflow-hidden p-8 mr-10">
-              <div className="overflow-hidden rounded-[20px] ">
-                <img
-                  className="h-44"
-                  src="/src/assets/ENSAYO DE TRACCION.jpg"
-                ></img>
-              </div>
-              <h1 className="text-center font-medium p-3 ">
-                ENSAYO DE TRACCION
-              </h1>
-              <p className="text-center text-sm ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                lacinia odio vitae vestibulum vestibulum.
-              </p>
-              <br></br>
-              <div className="pl-11">
-                <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-24  bg-[#39f809] hover:bg-[#0921f8] rounded-[50px] p-1 text-center">
-                  <NavLink
-                    to="/"
-                    className="font-medium hover:text-[#4cfb0e]  "
-                  >
-                    Más
-                  </NavLink>
-                </div>
-              </div>
-            </div>
+          </section>
+        </div>
+      </section>
+      <br />
+      <section className="container mx-auto pt-12">
+        <h1 className="text-center text-2xl text-shadow font-semibold text-[#00ff66]">Sectores especializados</h1>
+        <div className="flex flex-wrap pt-12 justify-center items-center">
+          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
+            <img className="opacity-25 h-full" src="/src/assets/SectorMinero.jpg" alt="Sector especializado" />
+            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Minería</h1>
+          </div>
+          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
+            <img className="opacity-25 h-full" src="/src/assets/SectorCivil.jpg" alt="Sector especializado" />
+            <h1 className="absolute text-white top-[43%] left-[45%] text-2xl font-medium">Civil</h1>
+          </div>
+          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
+            <img className="opacity-25 h-full" src="/src/assets/SectorMecanica.jpg" alt="Sector especializado" />
+            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Mecánica</h1>
+          </div>
+          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
+            <img className="opacity-25 h-full" src="/src/assets/Sectordental.jpg" alt="Sector especializado" />
+            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Dental</h1>
+          </div>
+          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
+            <img className="opacity-25 w-full h-full" src="/src/assets/SectorHidraulico.jpg" alt="Sector especializado" />
+            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Hidráulica</h1>
+          </div>
+          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
+            <img className="opacity-25 h-full" src="/src/assets/SectorElectrico.jpg" alt="Sector especializado" />
+            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Eléctrico</h1>
           </div>
         </div>
       </section>
       <br></br>
-      <section className="container mx-auto  pt-12">
-      <h1 className="text-center text-2xl text-shadow font-semibold text-[#00ff66]">Sectores especializados</h1>
-        <div className="flex flex-wrap pt-12 justify-center items-center">
-
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5 ">
-            <img className="opacity-25  h-full" src="/src/assets/SectorMinero.jpg" alt=""/>
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium"  >Mineria</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5 ">
-            <img className="opacity-25 h-full" src="/src/assets/SectorCivil.jpg" alt=""/>
-            <h1 className="absolute text-white top-[43%] left-[45%] text-2xl font-medium"  >Civil</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 h-full" src="/src/assets/SectorMecanica.jpg" alt=""/>
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium"  >Mecanica</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 h-full" src="/src/assets/Sectordental.jpg" alt=""/>
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium"  >Dental</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 w-full h-full" src="/src/assets/SectorHidraulico.jpg" alt=""/>
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium"  >Hidraulica</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 h-full" src="/src/assets/SectorElectrico.jpg" alt=""/>
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium"  >Electrico</h1>
-          </div> 
-          </div> 
-      </section>
-      <br></br>
       <section>
+
 
       </section>
     </>
