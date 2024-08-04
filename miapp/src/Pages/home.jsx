@@ -5,6 +5,8 @@ import { IoDocumentTextSharp } from "react-icons/io5";
 import { FaTools } from "react-icons/fa";
 import { GiTestTubes } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi2";
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -33,11 +35,7 @@ const Home = () => {
         title: 'Ensayo de Dureza',
         description: 'Descripción detallada sobre el ensayo de dureza.',
       },
-      {
-        img: '/src/assets/ENSAYO DE TRACCION.jpg',
-        title: 'Ensayo de Fatiga',
-        description: 'Descripción detallada sobre el ensayo de fatiga.',
-      },
+      
     ],
     'Probetas': [
       {
@@ -55,11 +53,7 @@ const Home = () => {
         title: 'Probetas de Plástico',
         description: 'Descripción sobre probetas de plástico.',
       },
-      {
-        img: '/src/assets/PROBETAS.jpg',
-        title: 'Probetas Compuestas',
-        description: 'Descripción sobre probetas compuestas.',
-      },
+      
     ],
     'Mantenimiento': [
       {
@@ -77,11 +71,7 @@ const Home = () => {
         title: 'Mantenimiento Predictivo',
         description: 'Descripción sobre mantenimiento predictivo.',
       },
-      {
-        img: '/src/assets/MANTENIMIENTO.jpg',
-        title: 'Mantenimiento Proactivo',
-        description: 'Descripción sobre mantenimiento proactivo.',
-      },
+    
 
     ],
     'Asesoria': [
@@ -100,11 +90,7 @@ const Home = () => {
         title: 'Asesoría en Normativas',
         description: 'Descripción sobre asesoría en normativas.',
       },
-      {
-        img: '/src/assets/ENSAYO DE TRACCION.jpg',
-        title: 'Asesoría en Implementación',
-        description: 'Descripción sobre asesoría en implementación.',
-      },
+      
     ],
   };
 
@@ -124,12 +110,14 @@ const Home = () => {
             <br></br>
             <br></br>
             <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-32 bg-gradient-to-r from-cyan-800 to-lime-200 rounded-full flex justify-center">
-              <NavLink
-                to="/servicios"
-                className=" font-semibold py-3 text-center hover:font-bold"
-              >
-                Servicios
-              </NavLink>
+            <Link
+          to="Servicios"
+          smooth={true}
+          duration={500}
+          className="font-semibold py-3 text-center hover:font-bold cursor-pointer"
+        >
+          Servicios
+        </Link>
             </div>
           </div>
           <div className="flex w-full pt-12">
@@ -174,9 +162,9 @@ const Home = () => {
       </section>
       <br></br>
 
-      <section className="container mx-auto">
+      <section className="container mx-auto" id="Servicios">
         <div>
-          <div className="flex pt-12 justify-center items-center">
+          <div className="flex pt-12 justify-center items-center" >
             <span>
               <div
                 className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]"
@@ -224,9 +212,8 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <section className="container mx-auto pt-12">
-            <h1 className="text-center text-2xl text-shadow font-semibold text-[#00ff66]">Nuestros Servicios</h1>
-            <div className="flex flex-wrap justify-center gap-6 pt-12">
+          
+            <div className="flex justify-center gap-10 pt-12">
               {categoryContent[selectedCategory].map((item, index) => (
                 <div
                   key={index}
@@ -235,17 +222,16 @@ const Home = () => {
                   <div className="overflow-hidden rounded-[20px]">
                     <img className="h-44 w-full object-cover" src={item.img} alt={item.title} />
                   </div>
-                  <h1 className="text-center font-medium p-3 text-lg">{item.title}</h1>
+                  <h1 className="text-center font-medium p-3 ">{item.title}</h1>
                   <p className="text-center text-sm text-gray-600">{item.description}</p>
                   <div className="flex justify-center pt-4">
-                    <NavLink to="/" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-24 bg-[#39f809] hover:bg-[#0921f8] rounded-full p-2 text-center text-white font-medium">
+                    <NavLink to="/" className="font-medium text-gray-950 hover:text-[#4cfb0e] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-24 bg-[#39f809] hover:bg-[#0921f8] rounded-full p-2 text-center font-medium">
                       Más
                     </NavLink>
                   </div>
                 </div>
               ))}
             </div>
-          </section>
         </div>
       </section>
       <br />

@@ -19,7 +19,7 @@ const NavBar = () => {
         </ul>
       </nav>
       <NavLink to="/"  className="flex order-first lg:order-none lg:w-1/5 lg:items-center lg:justify-center mb-4 md:mb-0">
-        <img className='w-40 h-40' src="../../LOGO_OFICIAL-png.png" alt="" />
+        <img className='w-40 h-36' src="../../LOGO_OFICIAL-png.png" alt="" />
       </NavLink>
       <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0 cursor-pointer">
      
