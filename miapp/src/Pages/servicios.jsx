@@ -176,7 +176,7 @@ const Servicios = () => {
 
   return (
     <div>
-      <div className="relative w-full h-[60vh] overflow-hidden">
+      <div className="relative w-full h-[90vh] overflow-hidden">
         <img 
           src="/src/assets/Servicios.png" 
           alt="Servicios" 

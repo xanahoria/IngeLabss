@@ -6,7 +6,7 @@ import { FaTools } from "react-icons/fa";
 import { GiTestTubes } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi2";
 import { Link, animateScroll as scroll } from 'react-scroll';
-
+import Sectores from "../components/Sectores";
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,6 +14,8 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import Info from "../components/Info";
+
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState('Ensayos');
@@ -100,9 +102,9 @@ const Home = () => {
 
   return (
     <>
-      <section className=" container none flex items-center w-[100%]">
-        <div className="bg-[url('/src/assets/Home.png')] bg-cover bg-center w-full h-screen flex">
-          <div className="pl-36">
+      <section className=" relative items-center bg-[url('/src/assets/Home.png')] overflow-hidden">
+        <div className="  h-screen flex">
+          <div className="pl-40">
             <h1 className="text-white text-left text-6xl font-bold pt-60">
               Mantentesiempre<br></br>conectado
             </h1>
@@ -120,10 +122,11 @@ const Home = () => {
         </Link>
             </div>
           </div>
-          <div className="flex w-full pt-12">
+          <div className="flex w-full pt-24 pr-24">
             <Swiper
               style={{
                 "--swiper-pagination-color": "#fff",
+                
               }}
               lazy={true}
               pagination={{
@@ -164,7 +167,7 @@ const Home = () => {
 
       <section className="container mx-auto" id="Servicios">
         <div>
-          <div className="flex pt-12 justify-center items-center" >
+          <div className="md: flex pt-12 justify-center items-center" >
             <span>
               <div
                 className="bg-[#4d36d7] rounded-full w-16 h-16 mx-20 place-content-center pl-3.5 cursor-pointer hover:bg-[#5ceb19]"
@@ -225,7 +228,7 @@ const Home = () => {
                   <h1 className="text-center font-medium p-3 ">{item.title}</h1>
                   <p className="text-center text-sm text-gray-600">{item.description}</p>
                   <div className="flex justify-center pt-4">
-                    <NavLink to="/" className="font-medium text-gray-950 hover:text-[#4cfb0e] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-24 bg-[#39f809] hover:bg-[#0921f8] rounded-full p-2 text-center font-medium">
+                    <NavLink to="/servicios" className="font-medium text-gray-950 hover:text-[#4cfb0e] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-24 bg-[#39f809] hover:bg-[#0921f8] rounded-full p-2 text-center font-medium">
                       Más
                     </NavLink>
                   </div>
@@ -235,40 +238,10 @@ const Home = () => {
         </div>
       </section>
       <br />
-      <section className="container mx-auto pt-12">
-        <h1 className="text-center text-2xl text-shadow font-semibold text-[#00ff66]">Sectores especializados</h1>
-        <div className="flex flex-wrap pt-12 justify-center items-center">
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 h-full" src="/src/assets/SectorMinero.jpg" alt="Sector especializado" />
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Minería</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 h-full" src="/src/assets/SectorCivil.jpg" alt="Sector especializado" />
-            <h1 className="absolute text-white top-[43%] left-[45%] text-2xl font-medium">Civil</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 h-full" src="/src/assets/SectorMecanica.jpg" alt="Sector especializado" />
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Mecánica</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 h-full" src="/src/assets/Sectordental.jpg" alt="Sector especializado" />
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Dental</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 w-full h-full" src="/src/assets/SectorHidraulico.jpg" alt="Sector especializado" />
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Hidráulica</h1>
-          </div>
-          <div className="rounded-[50px] overflow-hidden relative w-[450px] h-[300px] m-5">
-            <img className="opacity-25 h-full" src="/src/assets/SectorElectrico.jpg" alt="Sector especializado" />
-            <h1 className="absolute text-white top-[43%] left-[40%] text-2xl font-medium">Eléctrico</h1>
-          </div>
-        </div>
-      </section>
+      
+      <Sectores></Sectores>
       <br></br>
-      <section>
-
-
-      </section>
+      <Info></Info>
     </>
   );
 };
