@@ -4,9 +4,12 @@ import { CgMail } from "react-icons/cg";
 import { NavLink } from 'react-router-dom';
 
 
-const NavBar = () => {
-  const [scrolled, setScrolled] = useState(false);
 
+
+const NavBar = () => {
+  /*Esto permite que la barra de navegacion cambien al momento de bajar */ 
+  const [scrolled, setScrolled] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
@@ -16,16 +19,20 @@ const NavBar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+  
   const btnLink='mr-8 hover:text-lime-300 hover:text-shadow'
-  const activeLink='mr-8 text-lime-300 text-shadow'
+  const activeLink='mr-8 text-lime-300 text-shadow' 
   return (
-    <header className={`fixed font-semibold ${scrolled ? 'bg-black/75' : 'bg-transparent'} text-lime-500 body-font top-0 left-0 right-0 z-50 transition-colors duration-300`}>
+    <header className={`fixed font-semibold ${scrolled ? /*'bg-black/75'*/'bg-[#101728]' : 'bg-transparent'} text-lime-500 body-font top-0 left-0 right-0 z-50 transition-colors duration-300`}>
     <div className="container mx-auto flex flex-wrap  md:px-12 flex-col md:flex-row items-center">
       <nav className="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto cursor-pointer">
         <ul>
         <NavLink to="/servicios"className={({isActive}) => isActive?activeLink:btnLink }>Servicios</NavLink>
-        <NavLink to="/sectore" className={({isActive}) => isActive?activeLink:btnLink }>Sectores</NavLink>
+        <NavLink to="/sectore" className={({isActive}) => isActive?activeLink:btnLink }>
+          
+          Sectores
+          
+        </NavLink>
         <NavLink to="/nosotros" className={({isActive}) => isActive?activeLink:btnLink }>Nosotros</NavLink>
         <NavLink to="/contacto"  className={({isActive}) => isActive?activeLink:btnLink }>Contacto</NavLink>
         </ul>
