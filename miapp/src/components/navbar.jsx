@@ -28,11 +28,7 @@ const NavBar = () => {
       <nav className="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto cursor-pointer">
         <ul>
         <NavLink to="/servicios"className={({isActive}) => isActive?activeLink:btnLink }>Servicios</NavLink>
-        <NavLink to="/sectore" className={({isActive}) => isActive?activeLink:btnLink }>
-          
-          Sectores
-          
-        </NavLink>
+        <NavLink to="/sectore" className={({isActive}) => isActive?activeLink:btnLink }>Sectores</NavLink>
         <NavLink to="/nosotros" className={({isActive}) => isActive?activeLink:btnLink }>Nosotros</NavLink>
         <NavLink to="/contacto"  className={({isActive}) => isActive?activeLink:btnLink }>Contacto</NavLink>
         </ul>

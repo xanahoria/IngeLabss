@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import { Galleria } from 'primereact/galleria';
+
+
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -16,7 +19,7 @@ function CustomTabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
-      className=" w-96 h-63 felx justify-center items-center bg-[#260E69] rounded-lg "
+      className="  felx justify-center items-center bg-[#260E69] rounded-lg "
 
     >
       {value === index && <Box sx={{ p: 5 }}>{children}</Box>}
@@ -52,27 +55,27 @@ Ofrecemos capacitación sin costo en temas relacionado a metrología (mantenimie
 Ofrecemos capacitación sin costo en temas relacionado a metrología (mantenimiento, ajuste, verificación, calibración e interpretación de certificados de calibración)</p>
       </div>
     </section>
-    <section className='bg-gradient-to-r from-indigo-500 relative w-full h-full overflow-hidden'>
+    <section className='bg-gradient-to-tl from-indigo-500 relative w-full h-full overflow-hidden'>
       <div className='flex justify-center py-24 px-40'>
         
           <img src='/src/assets/Mision.svg'></img>
         
         <div className='block content-center p-12 space-y-8 '>
          <TbTargetArrow className="w-12 h-12 text-white ml-[313px] relative"/>
-          <h1 className='text-center text-[#5dff25] text-2xl font-medium'>Mision</h1>
-          <p className='text-[#6bff25] text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
+          <h1 className='text-center text-[#5dff25] text-xl font-medium'>Mision</h1>
+          <p className='text-neutral-300 text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
     </section>
-    <section className='bg-gradient-to-r from-[#302366] to-[#C724D5]/90 relative w-full h-full overflow-hidden'>
+    <section className='bg-gradient-to-bl from-indigo-500 relative w-full h-full overflow-hidden'>
       <div className='flex justify-center py-24 px-40'>
       <div className='block content-center p-12 space-y-8 '>
       <TbEyeSearch className="w-12 h-12 text-white ml-[313px] relative"/>
-          <h1 className='text-center  text-[#5dff25] text-2xl font-medium'>Vision</h1>
-          <p className=' text-[#5dff25] text-sm text-right '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
+          <h1 className='text-center  text-[#5dff25] text-xl font-medium'>Vision</h1>
+          <p className=' text-white text-sm text-right '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -111,15 +114,19 @@ Ofrecemos capacitación sin costo en temas relacionado a metrología (mantenimie
       <Box className="w-full flex justify-center items-center py-24">
       <CustomTabPanel value={value} index={0}>
         <div className='flex  justify-center content-center '>
-        <p className='text-white text-sm '>
-        en el 2023 gano un premio al mejor ingeniero ccdoj</p>
-        <img src='/src/assets/INGENIERO.png'className=' h-40'></img>
+        <p className='text-white text-sm'>
+        en el 2023 gano un premio al mejor ingeniero 
+        <br></br>
+        en el 2023 gano un premio al mejor ingeniero 
+        <br></br>
+        en el 2023 gano un premio al mejor ingeniero </p>
+        <img src='/src/assets/INGENIERO.png'className=' h-48'></img>
         </div> 
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
       <div className='flex  justify-center content-center '>
         <p className='text-white text-sm '>
-        en el 2023 gano un premio al mejor ingeniero ccdoj</p>
+        en el 2023 gano un premio al mejor ingeniero </p>
         <img src='/src/assets/INGENIERO.png'className=' h-40'></img>
         </div> 
       </CustomTabPanel>
@@ -148,6 +155,23 @@ Ofrecemos capacitación sin costo en temas relacionado a metrología (mantenimie
     </Box>
     </div>
     </section>
+    <section className='relative w-full h-[90vh] overflow-hidden bg-[#1E1E1E] justify-center content-center px-12'>
+    <h1 className='text-lg text-center p-8 text-white	'>Sigue de cerca a la mejor empresa de servicios de este rubro</h1>
+        <div className='bg-[#101728] justify-center content-center flex '>
+          <div className='block p-8 text-white'>
+            <h1 className='text-lg  '>Laboratorios de ensayo</h1>
+            <p >Lorem ipsum, dolor sit amet consectetur </p>
+          </div>
+          <div className="">
+          
+          <img src='/src/assets/Rectangulo.png'className=' h-80 justify-center content-center'></img>
+            <video src="https://www.youtube.com/embed/wy7ENOO6RiI?si=yrgZA3WZ_SWI2IaF" ></video>
+          </div>
+        </div>
+        
+    </section> 
+    
+
     </>
   );
 }

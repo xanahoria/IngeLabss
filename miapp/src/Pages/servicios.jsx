@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { IoDocumentTextSharp } from "react-icons/io5";
+import { FaTools } from "react-icons/fa";
+import { GiTestTubes } from "react-icons/gi";
+import { HiUserGroup } from "react-icons/hi2";
 
 const Servicios = () => {
   const [selectedService, setSelectedService] = useState('Preparación de Probetas');
@@ -173,7 +177,8 @@ const Servicios = () => {
     setModalContent(null);
     setAnuncioInfo('');
   };
-
+ 
+   
   return (
     <div>
       <div className="relative w-full h-[90vh] overflow-hidden">
@@ -184,53 +189,52 @@ const Servicios = () => {
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80"></div>
         <div className="absolute top-1/2 left-16 transform -translate-y-1/2">
-          <div className="text-left text-white">
-            <div className="text-4xl font-bold">Servicios</div>
+          <div className="text-left text-white/75">
+            <div className="text-4xl font-bold pl-8">Nuestros Servicios</div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-screen-lg mx-auto mt-8">
-        <nav className="flex flex-wrap justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+      <div className="max-w-screen-lg mx-auto mt-8 pt-20">
+        <nav className=" flex flex-wrap justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <button
             onClick={() => setSelectedService('Preparación de Probetas')}
-            className="flex items-center justify-center rounded-full bg-white text-cyan-600 w-full sm:w-48 h-12 hover:bg-gray-100"
+            className={`group flex items-center justify-center rounded-full text-white w-full sm:w-48 h-12 ${selectedService === 'Preparación de Probetas' ? 'bg-sky-500'  : 'hover:bg-sky-500'}`}
           >
-            <span className="text-xs sm:text-sm font-medium">Preparación de probetas</span>
+            <IoDocumentTextSharp className={`mr-2 w-8 h-8 ${selectedService === 'Preparación de Probetas' ? 'text-white' : 'text-blue-500 group-hover:text-white'}`}  />
+            <span className="text-xs sm:text-sm font-medium ">Ensayos</span>
           </button>
           <button
             onClick={() => setSelectedService('Calibración')}
-            className="flex items-center justify-center rounded-full bg-white text-cyan-600 w-full sm:w-48 h-12 hover:bg-gray-100"
+            className={`group flex items-center justify-center rounded-full text-white w-full sm:w-48 h-12 ${selectedService === 'Calibración' ? 'bg-sky-500' : 'hover:bg-sky-500'}`}
           >
-            <span className="text-xs sm:text-sm font-medium">Calibración</span>
+            <GiTestTubes className={`mr-2 w-8 h-8 ${selectedService === 'Calibración' ? 'text-white' : 'text-blue-500 group-hover:text-white'}`} />
+            <span className="text-xs sm:text-sm font-medium">Probetas</span>
           </button>
           <button
             onClick={() => setSelectedService('Mantenimiento e Inspección')}
-            className="flex items-center justify-center rounded-full bg-white text-cyan-600 w-full sm:w-48 h-12 hover:bg-gray-100"
+            className={`group flex items-center justify-center rounded-full text-white w-full sm:w-48 h-12 ${selectedService === 'Mantenimiento e Inspección' ? 'bg-sky-500' : 'hover:bg-sky-500'}`}
           >
-            <span className="text-xs sm:text-sm font-medium">Mantenimiento e Inspección</span>
+            <FaTools className={`mr-2 w-8 h-8 ${selectedService === 'Mantenimiento e Inspección' ? 'text-white' : 'text-blue-500 group-hover:text-white'}`} />
+            <span className="text-xs sm:text-sm font-medium">Mantenimiento</span>
           </button>
           <button
             onClick={() => setSelectedService('Laboratorio de Ensayos')}
-            className="flex items-center justify-center rounded-full bg-white text-cyan-600 w-full sm:w-48 h-12 hover:bg-gray-100"
+            className={`group flex items-center justify-center rounded-full text-white w-full sm:w-48 h-12 ${selectedService === 'Laboratorio de Ensayos' ? 'bg-sky-500' : 'hover:bg-sky-500'}`}
           >
-            <span className="text-xs sm:text-sm font-medium">Laboratorio de Ensayos</span>
+            <HiUserGroup className={`mr-2 w-8 h-8 ${selectedService === 'Laboratorio de Ensayos' ? 'text-white' : 'text-blue-500 group-hover:text-white'}`} />
+            <span className="text-xs sm:text-sm font-medium">Asesoria</span>
           </button>
         </nav>
       </div>
 
-      <div className="max-w-screen-lg mx-auto mt-8 flex justify-center">
-        <div className="w-full max-w-5xl h-6 bg-gradient-to-r from-cyan-300 via-white to-white rounded-full"></div>
-      </div>
-
-      <div className="max-w-screen-lg mx-auto mt-8">
-        <div className="p-4 rounded-lg bg-[#1E211C]">
+      <div className="max-w-screen-lg mx-auto mt-8 pt-8">
+        <div className="p-4 rounded-lg ">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {servicesContent[selectedService].map((service, index) => (
               <div 
                 key={index}
-                className="flex flex-col items-center justify-center rounded-lg shadow-lg p-4 cursor-pointer transition-transform transform hover:scale-105"
-                style={{ backgroundColor: '#1E211C' }}
+                className="bg-neutral-700 flex flex-col items-center justify-center rounded-lg shadow-lg p-4 cursor-pointer transition-transform transform hover:scale-105"
                 onClick={() => handleCardClick(service)}
               >
                 <img 
@@ -249,13 +253,13 @@ const Servicios = () => {
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-[#1E211C] p-8 rounded-lg max-w-4xl w-full relative z-60">
             <button
-              className="absolute top-2 right-2 text-gray-600 text-2xl font-bold"
+              className="absolute top-2 right-2 text-gray-600 text-2xl font-bold hover:text-white"
               onClick={closeModal}
               style={{ fontSize: '2rem' }}
             >
               &times;
             </button>
-            <div className="text-2xl text-purple-600 font-bold mb-4">{modalContent.description}</div>
+            <div className="text-2xl text-blue-500 font-bold mb-8">{modalContent.description}</div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="lg:col-span-1">
                 <img 
@@ -264,14 +268,14 @@ const Servicios = () => {
                   className="w-full h-auto object-cover rounded-lg"
                 />
               </div>
-              <div className="lg:col-span-1 text-white">
+              <div className="lg:col-span-1 text-white pl-8">
                 <div className="text-lg font-bold mb-2">Uso</div>
                 <p>{anuncioInfo}</p>
               </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
-              <div className="lg:col-span-1 text-white">
-                <div className="text-lg font-bold mb-2">Preparación</div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
+              <div className="lg:col-span-1 text-white pl-8">
+                <div className="text-lg font-bold mb-2 ">Preparación</div>
                 <ul className="list-disc list-inside text-white">
                   {modalContent.preparationSteps.map((step, index) => (
                     <li key={index}>{step}</li>
