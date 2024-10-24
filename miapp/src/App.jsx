@@ -1,6 +1,6 @@
-
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Layaut from "./components/layaut";
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+import 'primeicons/primeicons.css';
 import NavBar from "./components/navbar";
 import Home from "./Pages/home";
 import Servicios from "./Pages/servicios";
@@ -17,10 +17,10 @@ function App() {
       <NavBar></NavBar>
       
 
-      <Layaut>
+      
         <Routes>
           <Route path='/' element={<Home></Home>} ></Route>
-          <Route path='/servicios' element={<Servicios></Servicios>} ></Route>
+          <Route path='/servicios' element={<Servicios></Servicios>} d ></Route>
           <Route path='/sectore' element={<Sectores></Sectores>} ></Route>
           <Route path='/nosotros' element={<Nosotros></Nosotros>} ></Route>
           <Route path='/contacto' element={<Contacto></Contacto>} ></Route>
@@ -29,7 +29,7 @@ function App() {
         </Routes>
 
 
-        </Layaut> 
+        
         
       <Footer></Footer>
    </>   

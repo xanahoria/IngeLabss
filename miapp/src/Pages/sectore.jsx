@@ -2,7 +2,9 @@
 const Sectores = () => {
   return (
     <>
-    <section></section>
+    <section>
+      
+    </section>
     </>
   )
 }
